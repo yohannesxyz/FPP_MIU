@@ -11,6 +11,7 @@ package lesson2.basics.typicalprogram;
 public class Main {
 
 	public static void main(String[] args) {
+		Employee e = new Employee();
 		Address add1A = new Address("10 Adams", "Fairfield", "IA", "52556");
 		Address add1B = new Address("110 Burlington", "Fairfield", "IA", "52556");
 		Address add2A = new Address("322 Harrison", "Fairfield", "IA", "52556");
