@@ -4,7 +4,12 @@ import java.time.LocalDate;
 import java.util.Date;
 
 public class Main {
-
+	public static void m() {
+		System.out.println("helloo");
+	}
+static {
+	int bbb=1;
+}
 	public static void main(String[] args) {
 		
 		Date date = dateFromLocalDate(LocalDate.of(1970, 1, 1));
@@ -15,6 +20,7 @@ public class Main {
 
 	public static Date dateFromLocalDate(LocalDate localDate) {
 		//implement
+		
 		return null;
 	}
 }
