@@ -63,7 +63,7 @@ public class Label  {
     	copy.setText("Hello");
     	copy.setAlignment(LEFT);
     	Label another = l;
-    	another.setText("Goodbye");
+    	l.setText("Goodbye");
     	System.out.println(another.getText());
     	System.out.println(l.getText());
 //    	

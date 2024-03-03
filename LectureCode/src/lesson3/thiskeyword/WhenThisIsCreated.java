@@ -19,7 +19,7 @@ public class WhenThisIsCreated {
 		System.out.println(w.t);
 		w.test();
 		System.out.println("before constructor: " + w.val0);
-//		System.out.println("first line of constructor: " + w.val1);
-//		System.out.println("after constructor: " + w.val2);
+		System.out.println("first line of constructor: " + w.val1);
+		System.out.println("after constructor: " + w.val2);
 	}
 }
