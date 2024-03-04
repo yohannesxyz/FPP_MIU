@@ -14,7 +14,11 @@ public class WhenThisIsCreated {
 	        + this.getClass().getName();
 	}
 	
+	
 	public static void main(String[] args) {
+		
+		
+		 
 		WhenThisIsCreated w = new WhenThisIsCreated();
 		System.out.println(w.t);
 		w.test();
