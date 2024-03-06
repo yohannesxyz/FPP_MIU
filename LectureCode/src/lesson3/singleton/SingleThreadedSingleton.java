@@ -19,8 +19,8 @@ public class SingleThreadedSingleton {
 	}
 	
 	public static void main(String[] args) {
-//		SingleThreadedSingleton singleton = 
-//			SingleThreadedSingleton.getInstance();
+		SingleThreadedSingleton singleton = new
+			SingleThreadedSingleton();
 		for(int i = 0; i < 10; ++i) {
 			SingleThreadedSingleton.getInstance();
 		}

@@ -21,9 +21,12 @@ public class DateCalendarSamples {
     }
     public static void main(String [] args) {
         //new DateCalendarSamples("MM-dd-yy");
-        DateCalendarSamples dm = new DateCalendarSamples("M-dd-yy");
-        dm.fromSlides();
-        dm.testCalendar();
+//        DateCalendarSamples dm = new DateCalendarSamples("M-dd-yy");
+//        dm.fromSlides();
+//        dm.testCalendar();
+    	
+    	
+   
     } 
     
     public void fromSlides() {

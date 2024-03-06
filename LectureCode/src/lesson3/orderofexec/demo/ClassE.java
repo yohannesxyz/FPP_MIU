@@ -11,7 +11,7 @@ public class ClassE {
 		System.out.println("Hello");
 		return 1;
 	}
-	
+
 	ClassE(int num){
 		this.number = num; 
 		System.out.println("Constructor hello");

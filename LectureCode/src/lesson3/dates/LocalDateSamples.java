@@ -13,16 +13,20 @@ public class LocalDateSamples {
 //		System.out.println("Today's date: " + LocalDate.now());
 //		System.out.println("Today's date MM/dd/yyyy: " + localDateAsString(LocalDate.now()));
 //		System.out.println("Specified date: " + LocalDate.of(2000, 1, 1));
-//		System.out.println("Specified date MM/dd/yyyy: " + localDateAsString(LocalDate.of(2000, 1, 1)));
-		//Greg to LocalDate
-//		GregorianCalendar cal = new GregorianCalendar(2001, Calendar.MARCH, 15);
-//		System.out.println(localDateAsString(localDateFromGregCalendar(cal)));
-//		//LocalDate to Greg
-		LocalDate locDate = LocalDate.of(2000, 1, 1);
-		GregorianCalendar calendar = gregorianCalendarFromLocalDate(locDate);
-		Date d = calendar.getTime();
-        SimpleDateFormat formatter = new SimpleDateFormat("MM-dd-yyyy",Locale.US);
-        System.out.println(formatter.format(d));
+//		System.out.println("Specified date MM/dd/yyyy: " + localDateAsString(LocalDate.of(2000, 2, 1)));
+//		//Greg to LocalDate
+////		GregorianCalendar cal = new GregorianCalendar(2001, Calendar.MARCH, 15);
+////		System.out.println(localDateAsString(localDateFromGregCalendar(cal)));
+////		//LocalDate to Greg
+//		LocalDate locDate = LocalDate.of(2000, 1, 1);
+//		GregorianCalendar calendar = gregorianCalendarFromLocalDate(locDate);
+//		Date d = calendar.getTime();
+//        SimpleDateFormat formatter = new SimpleDateFormat("MM-dd-yyyy",Locale.US);
+//        System.out.println(formatter.format(d));
+		LocalDate loc = LocalDate.of(1970, 1, 1);
+		GregorianCalendar d = toGreg(loc);
+		Date b= d.getTime();
+		System.out.println(b.getTime()/1000/60/60);
 	}
 	///// LocalDate <--> String conversions
 	public static final String DATE_PATTERN = "MM/dd/yyyy"; 
@@ -46,5 +50,17 @@ public class LocalDateSamples {
 		return new GregorianCalendar(locDate.getYear(), locDate.getMonth().getValue()-1, locDate.getDayOfMonth());
 	}
 	
+	
+	public static LocalDate toLocal(GregorianCalendar g) {
+		return LocalDate.of(g.get(Calendar.YEAR), g.get(Calendar.MONTH)+1, g.get(Calendar.DATE));
+		
+	}
 
+	
+	public static GregorianCalendar toGreg(LocalDate d)
+	{
+		return new GregorianCalendar(d.getYear(),d.getMonth().getValue()-1,d.getDayOfMonth());
+		
+		
+	}
 }

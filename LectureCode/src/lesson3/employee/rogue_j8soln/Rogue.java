@@ -24,5 +24,6 @@ public class Rogue {
 				new GregorianCalendar(harry.getHireDay().getYear(), 
 						harry.getHireDay().getMonthValue(),
 						harry.getHireDay().getDayOfMonth()).getTime()));
+		
 	}
 }

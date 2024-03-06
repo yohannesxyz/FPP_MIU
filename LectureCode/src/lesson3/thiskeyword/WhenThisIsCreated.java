@@ -2,8 +2,10 @@ package lesson3.thiskeyword;
 
 public class WhenThisIsCreated {
 	Object t = this;
+	
 	String val0 = (this == null)? "null" : "Not null\n  Using 'this' to get class name: " 
        + this.getClass().getName();
+	
 	String val1 = null, val2 = null;
 	WhenThisIsCreated(){
 		val1 = (this == null)? "null" : "Not null\n  Using 'this' to get class name: " 
