@@ -15,7 +15,7 @@ public class PersonData {
 	public static void main(String[] args) {
 		PersonData pd = new PersonData();
 		Person[] persons = prepareData();
-		Arrays.sort(persons, pd.new NameComparator());
+		Arrays.sort(persons, pd.getNameComparator());
 		System.out.println(Arrays.toString(persons));
 	}
 	
