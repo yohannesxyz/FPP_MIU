@@ -2,9 +2,9 @@ package lesson4.exercise_4;
 
 public class Main {
 	public static void main(String[] args) {
-		//testEquals1();
+//		testEquals1();
 		testEquals2();
-		//test();
+//		test();
 	}
 	private static void testEquals1() {
 		Employee e1 = new Employee("Bob", 85000);
@@ -21,10 +21,12 @@ public class Main {
 		    + objectInArray(arr, bob));
 	}
 	private static boolean objectInArray(Object[] arr, Object b) {
-		for(Object e: arr) {
-			if(e.equals(b)) return true;
-		}
-		return false;
+		  for(Object e: arr) {
+		        if(e instanceof Employee && ((Employee)e).equals((Employee)b)) {
+		            return true;
+		        }
+		    }
+		    return false;
 	}
 	private static void test() {
 		String[] arr = {"Bob", "Joe"};

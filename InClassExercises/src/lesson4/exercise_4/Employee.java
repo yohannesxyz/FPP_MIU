@@ -17,7 +17,7 @@ public class Employee {
 	public String toString() {
 		return name + ": " + salary;
 	}
-	
+
 	public boolean equals(Employee emp) {
 		if(emp == null) return false;
 		if(emp.getClass() != getClass()) return false;

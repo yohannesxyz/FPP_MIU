@@ -7,6 +7,10 @@ import java.util.GregorianCalendar;
 
 
 class Employee implements Comparable<Employee> {
+	private String aString;
+	Employee(String s){
+		aString=s;
+	}
 	private String name;
 	private int salary;
 	private LocalDate hireDay;
@@ -37,23 +41,25 @@ class Employee implements Comparable<Employee> {
 	
 	@Override
 	public String toString() {
-		return name + " " + salary;
+		return aString;
 	}
 
 	@Override
-	public int compareTo(Employee e) {
-		if(getSalary() < e.getSalary()) return -1;
-		else if(getSalary() > e.getSalary()) return 1;
-		else { //getSalary() == e.getSalary()
-			return 0;
+	public int compareTo(Employee s) {
+		if(aString.length()<s.aString.length()) {
+			return -1;
 		}
+		else if(aString.length()>s.aString.length()) {
+			return 1;
+		}
+		else return 0;
 		
 	}
 	
 	public static void main(String[] args) {
-		Employee[] empArray = {new Employee("Bob", 200000, 2009, 5, 5),
-				new Employee("Dave", 100000, 2009, 5, 5),
-				new Employee("Tim", 150000, 2009, 5, 5) 
+		Employee[] empArray = {new Employee("Dave"),new Employee("Bob"),
+				
+				new Employee("Tim") 
 		};
 				
 		Arrays.sort(empArray);

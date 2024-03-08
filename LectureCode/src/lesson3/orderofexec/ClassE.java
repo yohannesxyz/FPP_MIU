@@ -33,7 +33,7 @@ public class ClassE {
 	}
 	public static void main(String[] args) {
 		new ClassE(3);
-new ClassE(3);
+//new ClassE(3);
 	}
 
 }

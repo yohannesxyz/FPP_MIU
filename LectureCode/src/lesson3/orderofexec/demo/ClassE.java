@@ -20,7 +20,7 @@ public class ClassE {
 	{
 		//Object initialization block
 		System.out.println("Object initialization block");
-	}
+}
 	
 	static {
 		//Static initialization block
