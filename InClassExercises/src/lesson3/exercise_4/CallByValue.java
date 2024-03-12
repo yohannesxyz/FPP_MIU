@@ -22,11 +22,11 @@ public class CallByValue {
 	public static void main(String[] args) {
 		int i;
 		CallByValue cbv = new CallByValue();
-		cbv.change1(cbv.e1, cbv.e2);
+//		cbv.change1(cbv.e1, cbv.e2);
 //		cbv = new CallByValue();
 //		cbv.change2(cbv.e1, cbv.e2);
 //		cbv = new CallByValue();
-//		cbv.change3(cbv.e1, cbv.e2);
+		cbv.change3(cbv.e1, cbv.e2);
 		System.out.println(cbv.e1.getSalary());
 		
 	}

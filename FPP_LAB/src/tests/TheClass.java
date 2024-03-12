@@ -3,19 +3,20 @@ package tests;
 import java.util.Date;
 
 
- class TheClass {
+class c{
+	int x=7;
 	
-    public static void main(String[] args) {
-        
-    	System.out.print("\\\n yes \\");
-      }
-    private class B
-    {
-        public static void main(String[] args) {
-
-
 }
+
+ class TheClass extends c{
+	int outerField= 3;
+    public static void main(String[] args) {
+    	 TheClass x= new TheClass();
     }
-
-
+   
+    
+    {
+    	System.out.print(x);
+      }
+ 
 }
