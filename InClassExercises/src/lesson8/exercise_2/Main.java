@@ -16,14 +16,22 @@ public class Main {
 		
 		//Three-node list -- add a node C to the list; (expected: A B C)
 		     //implement
+		next = new Node();
+		next.data ="C";
+		startNode.next.next=next;
 		System.out.println(startNode);
-		
+//	
 		//Remove B from the list (expected output: A C)
 		     //implement
+		startNode.next=startNode.next.next;
 		System.out.println(startNode);
 		
 		//Insert X into position 1  (expected output: A X C)
 		     //implement
+		next = new Node();
+		next.data="X";
+		next.next=startNode.next;
+		startNode.next=next;
 		System.out.println(startNode);
 
 	}

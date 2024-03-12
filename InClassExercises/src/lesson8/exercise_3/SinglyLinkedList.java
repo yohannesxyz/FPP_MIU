@@ -5,6 +5,24 @@ public class SinglyLinkedList {
 	
 	void insert(String s, int pos) {
 		//implement
+	int size=size();
+	if(pos<0||pos>size) throw new IllegalArgumentException("Illegal position for new node");
+		Node newNode= new Node();
+		newNode.data=s;
+		if(pos==0) {
+			newNode.next=startNode;
+			startNode=newNode;
+			
+		}
+		Node prev= startNode;
+		Node next= startNode.next;
+		for(int i=1;i<pos;i++) {
+			prev=next;
+			next=next.next;
+		}
+		prev.next= newNode;
+		newNode.next=next;
+		
 	}
 	
 	/** size = the number of non-null nodes */
@@ -102,26 +120,26 @@ public class SinglyLinkedList {
 		
 		SinglyLinkedList m = new SinglyLinkedList();
 		m.populateNodes();
-		boolean foundCharles = m.search("Charles");
-		System.out.println("Found Charles? " + foundCharles);
+//		boolean foundCharles = m.search("Charles");
+//		System.out.println("Found Charles? " + foundCharles);
+//		
+//		m.printNodes();
+//		m.addFirst("Frank");
+//		m.removeNode("David");
+//		m.printNodes();
+//		m.addLast("Ricardo");
+		m.printNodes();
 		
+//		uncomment when ready
+		System.out.println(m.size());
+		m.insert("Bob", 2);
 		m.printNodes();
-		m.addFirst("Frank");
-		m.removeNode("David");
+		m.insert("Jerry", 5);
 		m.printNodes();
-		m.addLast("Ricardo");
+		m.insert("Tom", 0);
 		m.printNodes();
-		
-		//uncomment when ready
-//		System.out.println(m.size());
-//		m.insert("Bob", 2);
-//		m.printNodes();
-//		m.insert("Jerry", 5);
-//		m.printNodes();
-//		m.insert("Tom", 0);
-//		m.printNodes();
-//		m.insert("Jarred", 5);
-//		m.printNodes();
+		m.insert("Jarred", 5);
+		m.printNodes();
 		
 	}
 	private void populateNodes() {

@@ -1,5 +1,7 @@
 package lesson8.exercise_1;
 
+import java.util.Arrays;
+
 public class MyStringList {
 	private final int INITIAL_LENGTH = 2;
 	private String[] strArray; 
@@ -11,7 +13,17 @@ public class MyStringList {
 	}
 	
 	public void minSort() {
+		
 		//implement
+		for(int i = 0; i<size;i++) {
+			for(int j=i+1;j<size;j++) {
+				if(strArray[i].compareTo(strArray[j])>0) {
+					String temp = strArray[j];
+					strArray[j]=strArray[i];
+					strArray[i]=temp;
+				}
+			}
+		}
 	}
 	
 	public void add(String s){
@@ -95,6 +107,7 @@ public class MyStringList {
 		l.add("Mark");
 		l.add("Dave");
 		l.minSort();
+		System.out.println(l);
 	}
 
 }
