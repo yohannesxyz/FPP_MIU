@@ -272,6 +272,7 @@ public class MyBST {
 		bst.insert(6);
 		bst.insert(7);
 		//bst.insert(7);
+		bst.remove(1);
 		System.out.println(bst.asList());
 	}
 
