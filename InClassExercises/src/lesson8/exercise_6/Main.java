@@ -19,6 +19,7 @@ public class Main  {
 		
 		
 		var merged = new ArrayList<List<String>>();
+//		List<List<String>> merged = new ArrayList<>();
 		merged.add(list1);
 		merged.add(list2);
 		merged.add(list3);
