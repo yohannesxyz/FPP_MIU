@@ -1,5 +1,7 @@
 package lesson11.exercise_2;
 
+import java.util.HashMap;
+
 public class Subarray {
 
 	public static void main(String[] args) {
@@ -16,6 +18,16 @@ public class Subarray {
 	 */
 	public static boolean isSubArray(String[] arr1, String[] arr2) {
 		//implement
-		return false;
+		HashMap<String,String> array1 = new HashMap<String,String>();
+		for(String s:arr2) {
+			array1.put(s, s);
+		}
+		for(int i=0;i<arr1.length;i++) {
+			if(!array1.containsKey(arr1[i])) {
+				return false;
+			}
+		}
+	
+		return true;
 	}
 }
