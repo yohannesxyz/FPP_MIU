@@ -5,11 +5,11 @@ class FinallyTest {
         try {
 //             return;                         // 1
 //             System.exit(0);                 // 2
-//             throw new Exception("first");   // 3a
+             throw new Exception("first");   // 3a
         }
         catch (Exception x){
 	         System.out.println(x.getMessage());
-//             throw new Exception("second");  // 3b
+             throw new Exception("second");  // 3b
         }
         finally {
             System.out.println("finally!");
