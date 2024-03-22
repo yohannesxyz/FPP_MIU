@@ -14,7 +14,7 @@ class FinallyTest {
         finally {
             System.out.println("finally!");
         }
-        System.out.println("last statement");
+//        System.out.println("last statement");
     }
 
 	public static void main(String[] args){
