@@ -11,19 +11,14 @@ import java.util.Set;
 public class Admin {
 	public static List<Student> convertArray(Object[] studentArray) {
 		/* implement */		
-		List<Integer> newList = new LinkedList<Integer>(listOf(1,2));
-		Set<Student> newS = new HashSet<Student>(newList);
-		newList.clear();
-		newList.addAll(newS);
-		Object [] arr = {1,2,3};
-		List<Integer> b = Arrays.asList(arr);
-//		List<Student> newList = (List<Student>)Arrays.asList(studentArray);
-//		for(Object b:studentArray) {
-//			if(b instanceof Student) {
-//				newList.add((Student)b);
-//			}
-//		}
-//		Collections.addAll(newList, studentArray);
+		
+		List<Student> newList = new ArrayList<Student>();
+		for(Object b:studentArray) {
+			if(b instanceof Student) {
+				newList.add((Student)b);
+			}
+		}
+
 		return newList;
 	}
 	
